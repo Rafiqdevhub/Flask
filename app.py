@@ -2,6 +2,13 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api, reqparse, fields, marshal_with, abort
 
+# Resource: Base class for creating RESTful resources.
+# Api: Manages API endpoints.
+# reqparse: Parses and validates request arguments.
+# fields: Defines the structure of API responses.
+# marshal_with: Serializes Python objects into JSON responses.
+# abort: Handles errors and returns HTTP error responses.
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
